@@ -1,0 +1,29 @@
+:root{
+    --mainColor:#009688;
+}
+h1{
+    background-color: var(--mainColor);
+    margin: 50px auto;
+    width: 150px;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+h1::before{
+    background-color: var(--mainColor);
+    content: "";
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    border-right: 10px solid white; 
+    transform: skewX(20deg);
+    
+}

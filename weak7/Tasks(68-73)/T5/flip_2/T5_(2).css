@@ -1,0 +1,45 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    perspective: 800px;
+}
+.flip{
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+.flip .box{
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+
+.flip .front{
+    background-color: rgb(146, 2, 2);
+}
+
+.flip .back{
+    background-color: rgb(3, 129, 255);
+    transform: rotateX(-180deg);
+}
+
+.flip:hover{
+    transform: rotateX(-180deg);
+
+}

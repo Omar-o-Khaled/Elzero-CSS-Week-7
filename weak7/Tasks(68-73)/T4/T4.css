@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+:root{
+    --mainColor: #607d8b;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: var(--mainColor);
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 5px solid black;
+    position: relative;
+}
+
+div::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+
+    /* 
+        content: "";
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    position: absolute;
+    top: -47%;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg) skew(13deg, 14deg);
+    */
+}
